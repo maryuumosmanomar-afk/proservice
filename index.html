@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ProService Skills Network</title>
+  <style>
+    :root{
+      --accent:#b22222;
+      --muted:#666;
+      --card-bg:#fff;
+      --page-bg:#f5f6fb;
+      --radius:12px;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, Arial, sans-serif;
+      background:var(--page-bg);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    header{
+      background:linear-gradient(90deg,var(--accent),#8b1a1a);
+      color:white;
+      position:sticky;
+      top:0;
+      z-index:40;
+      box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    }
+    .container{max-width:var(--maxw);margin:0 auto;padding:20px;}
+    nav{
+      display:flex;align-items:center;justify-content:space-between;gap:20px;
+    }
+    .brand{font-weight:700;letter-spacing:0.3px}
+    .nav-links{display:flex;gap:14px;align-items:center}
+    .nav-links a{color:white;text-decoration:none;font-weight:600}
+    .hero{
+      padding:60px 20px 40px;
+      display:flex;gap:30px;align-items:center;justify-content:space-between;
+    }
+    .hero-left{flex:1;max-width:620px}
+    .hero h1{font-size:2rem;margin-bottom:8px}
+    .hero p{color:var(--muted);line-height:1.6}
+    .cta{margin-top:16px;display:flex;gap:10px}
+    .btn{background:white;color:var(--accent);border:none;padding:10px 16px;border-radius:8px;font-weight:700;cursor:pointer}
+    .btn-outline{background:transparent;border:2px solid rgba(255,255,255,0.2);color:white}
+    .hero-right{flex:1;display:flex;justify-content:center}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.95), #fff); padding:16px;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,0.08);width:320px}
+    .user-types{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .user-type{background:var(--card-bg);padding:12px;border-radius:10px;border:1px solid #eee;font-weight:700}
+
+    /* services grid */
+    .section{padding:30px 20px}
+    .section h2{margin:0 0 14px;color:var(--accent)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card-bg);border-radius:12px;padding:14px;box-shadow:0 6px 18px rgba(31,41,55,0.06);overflow:hidden}
+    .card img{width:100%;height:160px;object-fit:cover;border-radius:10px;margin-bottom:10px}
+    .card h3{margin:6px 0}
+    .card p{color:var(--muted);font-size:14px}
+    .price{font-weight:800;color:#111;margin-top:10px}
+
+    /* responsive */
+    @media (max-width:980px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .hero{flex-direction:column;align-items:flex-start}
+      .hero-right{width:100%}
+    }
+    @media (max-width:620px){
+      .grid{grid-template-columns:1fr}
+      nav{padding:12px 0}
+      .hero h1{font-size:1.5rem}
+    }
+
+    /* footer */
+    footer{background:#fff;padding:18px 20px;border-top:1px solid #eee;margin-top:30px;text-align:center}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:8px}
+    .tag{background:#f1f3f5;padding:7px 10px;border-radius:999px;font-weight:600;color:#444}
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">ProService Skills Network</div>
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#professionals">Professionals</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Shabakadda xirfadlayaasha & macaamiisha — ProService</h1>
+        <p>Meel ay isku kulmaan xirfadlayaasha (decorators, dhismayaal, qurxiyo, IT iyo technology) iyo dadka raadinaya adeegyo ama shaqo. Isdiiwaangeli, baadho xirfadlayaal, dalbo adeeg ama hel fursado shaqo.</p>
+        <div class="cta">
+          <button class="btn">Isdiiwaangeli</button>
+          <button class="btn btn-outline">Baro sida loo isticmaalo</button>
+        </div>
+
+        <div style="margin-top:18px">
+          <strong>Users:</strong>
+          <div class="user-types">
+            <div class="user-type">Xirfadle (Professional)</div>
+            <div class="user-type">Raadinayaal Shaqo (Clients)</div>
+            <div class="user-type">Maamul (Admin)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <h3>Hal-ku-dheg</h3>
+          <p style="color:var(--muted);">Xirfadlayaasha iyo macaamiishu iskugu yimaadaan hal meel — search, compare, hire & pay securely.</p>
+          <div style="margin-top:12px" class="tags">
+            <div class="tag">Decoration</div>
+            <div class="tag">Guryo Dhisid</div>
+            <div class="tag">Qurxiniyo</div>
+            <div class="tag">IT & Tech</div>
+            <div class="tag">Catering</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section (5 main categories) -->
+    <section id="services" class="section">
+      <h2>Qaybaha Adeegyada (Categories)</h2>
+      <div class="grid">
+
+        <!-- Decoration -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" alt="Decoration">
+          <h3>Decoration</h3>
+          <p>Qorsheynta iyo qurxinta xafladaha, guriyaha, iyo goobaha ganacsi — bandhig, lighting, florals iyo design.</p>
+          <div class="price">Tusaale: Decoration Package — $50/hr</div>
+        </div>
+
+        <!-- Guryo Dhisid -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1558888406-4f5a3b1f6f80" alt="Guryo Dhisid">
+          <h3>Guryo Dhisid</h3>
+          <p>Dhismaha guryaha, dayactirka, foundation, framing, iyo interior finishing. Khubaro la hubo.</p>
+          <div class="price">Tusaale: Carpentry / Construction — $20/hr</div>
+        </div>
+
+        <!-- Qurxiniyo -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1514996937319-344454492b37" alt="Qurxiniyo">
+          <h3>Qurxiniyo (Beauty & Grooming)</h3>
+          <p>Salon services, make-up, hair styling, nails and personal grooming for special events.</p>
+          <div class="price">Tusaale: Makeup & Hair — $25</div>
+        </div>
+
+        <!-- IT & Technology -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="IT & Technology">
+          <h3>IT & Technology</h3>
+          <p>Web development, app development, network setup, IT support, digital marketing iyo automation.</p>
+          <div class="price">Tusaale: Web Dev — $15/hr</div>
+        </div>
+
+        <!-- Other Services -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231" alt="Other Services">
+          <h3>Adeegyo Kale</h3>
+          <p>Catering, transport, event planning iyo adeegyo kale oo gaar ah oo lagu daro shabakadda.</p>
+          <div class="price">Tusaale: Catering — $5/plate</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Professionals listing / example profiles -->
+    <section id="professionals" class="section">
+      <h2>Xirfadlayaal Muuqaal (Example Professionals)</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df" alt="Pro 1">
+          <h3>Cabdiraxmaan - Electrician</h3>
+          <p>10 sano oo khibrad ah, network & wiring, installations. Rating: ★★★★☆</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd" alt="Pro 2">
+          <h3>Fadumo - Decorator</h3>
+          <p>Event & home decorator, wedding & corporate events. Portfolio available on request.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1597986667973-1e9b7d0f1c18" alt="Pro 3">
+          <h3>Mahad - Web Developer</h3>
+          <p>Frontend & backend, small business websites, e-commerce solutions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="about" class="section">
+      <h2>Sida ay u Shaqayso</h2>
+      <p style="color:var(--muted);max-width:800px">
+        1) Isdiiwaangeli sida Xirfadle ama Macaamiil. &nbsp;
+        2) Xirfadlayaasha waxay dhisaan profile ay ku soo bandhigaan adeegooda & qiimayaasha. &nbsp;
+        3) Macaamiishu waxay baadhaan, isbarbardhigaan oo ay dalban karaan adeegga toos. &nbsp;
+        4) Haddii la doonayo, adeegga waxaa lagu bixiyaa qaab online/onsite iyadoo la hubinayo rating iyo feedback.
+      </p>
+    </section>
+
+    <!-- Contact / CTA -->
+    <section id="contact" class="section">
+      <h2>La Xiriir / Join</h2>
+      <p style="color:var(--muted)">Haddii aad rabto inaad ku biirto ProService, iska diiwaangeli ama nagala soo xiriir si aan kaaga caawino inaad profile dhisto.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <button class="btn">Sign Up as Professional</button>
+        <button class="btn btn-outline">Sign Up as Client</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="font-weight:700">ProService Skills Network</div>
+      <div style="color:var(--muted);margin-top:6px">Connecting experts with people who need services — Qardho & beyond.</div>
+      <div class="tags" style="margin-top:10px">
+        <div class="tag">Decoration</div>
+        <div class="tag">Guryo Dhisid</div>
+        <div class="tag">Qurxiniyo</div>
+        <div class="tag">IT</div>
+        <div class="tag">Catering</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
