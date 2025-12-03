@@ -62,14 +62,53 @@
     .card p{color:var(--muted);font-size:14px}
     .price{font-weight:800;color:#111;margin-top:10px}
 
+    /* Menu specific (minimal additions) */
+    .menu {
+      background: transparent;
+      margin-top:18px;
+    }
+    .menu-controls {
+      display:flex;
+      gap:10px;
+      align-items:center;
+      margin-bottom:14px;
+      flex-wrap:wrap;
+    }
+    .menu-search {
+      flex:1;
+      min-width:180px;
+    }
+    .menu-search input{
+      width:100%;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid #e6e6e6;
+      background:#fff;
+    }
+    .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .menu-item{
+      background:var(--card-bg);
+      border-radius:10px;
+      padding:12px;
+      box-shadow:0 6px 14px rgba(31,41,55,0.04);
+      display:flex;flex-direction:column;gap:8px;
+      align-items:flex-start;
+    }
+    .menu-item h4{margin:0}
+    .menu-item .meta{color:var(--muted);font-size:13px}
+    .menu-item .tag{background:#f1f3f5;padding:6px 8px;border-radius:8px;font-weight:600;font-size:12px}
+    .menu-bottom {margin-top:8px;font-size:13px;color:var(--muted)}
+
     /* responsive */
     @media (max-width:980px){
       .grid{grid-template-columns:repeat(2,1fr)}
+      .menu-grid{grid-template-columns:repeat(2,1fr)}
       .hero{flex-direction:column;align-items:flex-start}
       .hero-right{width:100%}
     }
     @media (max-width:620px){
       .grid{grid-template-columns:1fr}
+      .menu-grid{grid-template-columns:1fr}
       nav{padding:12px 0}
       .hero h1{font-size:1.5rem}
     }
@@ -176,6 +215,69 @@
           <div class="price">Tusaale: Catering — $5/plate</div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- NEW: Our Menu section (minimal change, visually consistent) -->
+    <section id="menu" class="section menu">
+      <h2>Liiska Adeegyada (Our Menu)</h2>
+
+      <!-- simple controls (search / quick filter) - no JS required for static display -->
+      <div class="menu-controls">
+        <div class="menu-search">
+          <input type="text" placeholder="Raadi adeeg... (e.g. Web Dev, Makeup, Carpentry)">
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <div class="tag">All</div>
+          <div class="tag">Decoration</div>
+          <div class="tag">Construction</div>
+          <div class="tag">Beauty</div>
+          <div class="tag">IT</div>
+        </div>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-item">
+          <h4>Web Development</h4>
+          <div class="meta">Service: IT & Technology — Duration: Hourly</div>
+          <div class="tag">Starting $15/hr</div>
+          <div class="menu-bottom">Small business websites, e-commerce, maintenance.</div>
+        </div>
+
+        <div class="menu-item">
+          <h4>Event Decoration Package</h4>
+          <div class="meta">Service: Decoration — Fixed / Hourly</div>
+          <div class="tag">From $50/hr</div>
+          <div class="menu-bottom">Full event theming, floral, lighting, setup & teardown.</div>
+        </div>
+
+        <div class="menu-item">
+          <h4>Carpentry & Construction</h4>
+          <div class="meta">Service: Guryo Dhisid — Hourly / Project</div>
+          <div class="tag">From $20/hr</div>
+          <div class="menu-bottom">Frame, finish, repairs, and small builds.</div>
+        </div>
+
+        <div class="menu-item">
+          <h4>Makeup & Hair</h4>
+          <div class="meta">Service: Beauty & Grooming — Fixed</div>
+          <div class="tag">$25 (event)</div>
+          <div class="menu-bottom">Bridal makeup, event styling, on-site service available.</div>
+        </div>
+
+        <div class="menu-item">
+          <h4>Catering — Basic Plate</h4>
+          <div class="meta">Service: Catering — Per Plate</div>
+          <div class="tag">$5 / plate</div>
+          <div class="menu-bottom">Buffet options, delivery and onsite service.</div>
+        </div>
+
+        <div class="menu-item">
+          <h4>Network Setup & Support</h4>
+          <div class="meta">Service: IT & Technology — Hourly</div>
+          <div class="tag">From $18/hr</div>
+          <div class="menu-bottom">Office networks, Wi-Fi, security, and printers.</div>
+        </div>
       </div>
     </section>
 
